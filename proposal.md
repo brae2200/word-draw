@@ -2,7 +2,7 @@
 word-draw
 
 ## Repository
-<Link to your project's public GitHub respository>
+[<Link to your project's public GitHub respository>](https://github.com/brae2200/word-draw)
 
 ## Description
 My program will take user input of a message and convert those characters to a line-drawn image. This creates a fun and interactive word-to-drawing experience. 
