@@ -1,0 +1,22 @@
+import turtle
+
+
+def main():
+    screen = turtle.Screen()
+    screen.bgcolor('black')
+    pen = turtle.Turtle()
+    pen.speed(1)
+    pen.pencolor('red')
+
+    pen.goto(100, 100)
+    pen.forward(200)
+    pen.left(90)
+    pen.forward(200)
+    pen.left(90)
+    pen.forward(200)
+
+    turtle.mainloop()
+
+
+if __name__ == "__main__":
+    main()
