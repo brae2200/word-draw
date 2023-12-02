@@ -7,7 +7,7 @@ def main():
     screen = turtle.Screen()
     screen.bgcolor('white')
     pen = turtle.Turtle()
-    pen.speed(4)
+    pen.speed(7)
     #pen.pencolor('black')
     #pen.width(20)
 
@@ -16,6 +16,10 @@ def main():
     message = input("Message: ")
     if message == 'cat':
         cat(pen)
+    elif message == 'star':
+        star(pen)
+    elif message == 'flower':
+        flower(pen)
     else:
         last_char_space = True
         for character in message:
@@ -109,17 +113,29 @@ def cat(pen):
     pen.up()
     pen.goto(-100, -20)
     pen.down()
-    pen.forward(100)
+    pen.forward(100)   
+
+def star(pen):
+    pen.width(3)
+    pen.pencolor('gold')
+
+    pen.begin_fill()
+
+    for steps in range(36):
+        pen.forward(200)
+        pen.left(170)
+
+    pen.end_fill()        
+
+def flower(pen):
+    pen.width(5)
+    pen.pencolor('violet')
+
+    for steps in range(9):
+        pen.circle(30)
+        pen.forward(150)
+        pen.left(160)
 
 
-
-
-
-
-    
-   
-   #turtle.reset
-
-    
 if __name__ == "__main__":
     main()
