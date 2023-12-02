@@ -1,6 +1,5 @@
 import turtle
-#import mylib
-#import random
+
 
 
 def main():
@@ -16,7 +15,7 @@ def main():
 
     message = input("Message: ")
     if message == 'cat':
-        cat()
+        cat(pen)
     else:
         last_char_space = True
         for character in message:
@@ -39,16 +38,64 @@ def main():
                 pen.backward(int(clist[1]))
             elif clist[0] == 'r':
                 pen.right(int(clist[1]))
+            
     turtle.mainloop()
 def format(character, pen):
-    format_map = {'A':'skyblue 4','B':'navy 2','C':'skyblue 4','D':'cyan 8','E':'red 3','F':'orange 7','G':'blue 8','H':'gold 9','I':'purple 7','J':'yellow 6','K':'gray 8','L':'yellow 8','M':'skyblue 7','N':'gray 10','O':'turquoise 9','P':'orange 7','Q':'cyan 2','R':'magenta 9','S':'darkgreen 10','T':'cyan 5','U':'blue 1','V':'magenta 2','W':'cyan 3','X':'gray 9','Y':'purple 10','Z':'lightgreen 10','a':'magenta 6','b':'gray 1','c':'blue 7','d':'chocolate 7','e':'skyblue 8','f':'darkgreen 5','g':'red 9','h':'black 1','i':'turquoise 8','j':'turquoise 1','k':'green 6','l':'magenta 7','m':'orange 1','n':'orange 8','o':'chocolate 6','p':'lightgreen 5','q':'red 9','r':'green 7','s':'white 2','t':'darkgreen 9','u':'black 2','v':'red 9','w':'orange 3','x':'darkgreen 1','y':'magenta 2','z':'red 7','0':'darkgreen 6','1':'purple 1','2':'orange 1','3':'brown 7','4':'white 6','5':'lightgreen 4','6':'gold 4','7':'darkgreen 8','8':'orange 3','9':'cyan 2'}
+    format_map = {'A':'skyblue 4','B':'navy 2','C':'skyblue 4','D':'cyan 12','E':'red 3','F':'orange 7','G':'blue 8','H':'gold 9','I':'purple 11','J':'yellow 6','K':'gray 2','L':'yellow 8','M':'skyblue 10','N':'gray 3','O':'turquoise 15','P':'orange 7','Q':'cyan 2','R':'magenta 9','S':'magenta 10','T':'cyan 5','U':'blue 1','V':'magenta 2','W':'cyan 3','X':'gray 9','Y':'purple 10','Z':'lightgreen 6','a':'magenta 10','b':'gray 1','c':'blue 7','d':'chocolate 7','e':'skyblue 8','f':'lightgreen 5','g':'red 2','h':'black 1','i':'turquoise 8','j':'turquoise 1','k':'green 3','l':'magenta 7','m':'orange 15','n':'orange 8','o':'chocolate 6','p':'lightgreen 3','q':'red 9','r':'green 2','s':'white 14','t':'darkgreen 1','u':'black 2','v':'red 7','w':'orange 3','x':'darkgreen 1','y':'magenta 2','z':'red 7','0':'turquoise 6','1':'purple 1','2':'orange 1','3':'brown 7','4':'white 6','5':'lightgreen 4','6':'gold 4','7':'darkgreen 8','8':'orange 3','9':'cyan 2'}
     flist = format_map[character].split(' ')
     pen.pencolor(flist[0])
     pen.width(int(flist[1]))
-    #pen.pencolor('skyblue')
-    #pen.width(4)
-#def cat():
-    #define cat draw instructions here
+
+def cat(pen):
+    pen.pencolor('orange')
+    pen.width(25)
+    pen.dot(300)
+    pen.up()
+    pen.goto(100,100)
+    pen.down()
+    pen.left(108)
+    pen.forward(100)
+    pen.left(148)
+    pen.forward(100)
+    pen.right(80)
+    pen.forward(130)
+    pen.right(108)
+    pen.forward(100)
+    pen.right(148)
+    pen.forward(100)
+    pen.home()
+    pen.pencolor('yellow')
+    pen.dot(100)
+    pen.left(90)
+    pen.forward(30)
+    pen.pencolor('violet')
+    pen.dot(50)
+    pen.up()
+    pen.pencolor('white')
+    pen.forward(30)
+    pen.right(90)
+    pen.forward(30)
+    pen.down()
+    pen.dot(70)
+    pen.pencolor('blue')
+    pen.dot(50)
+    pen.up()
+    pen.backward(60)
+    pen.pencolor('white')
+    pen.down()
+    pen.dot(70)
+    pen.pencolor('blue')
+    pen.dot(50)
+    pen.up()
+    pen.goto(-10, -10)
+    pen.width(5)
+    pen.down()
+    pen.forward(10)
+    pen.circle(30, 30)
+
+
+
+
 
     
    
