@@ -91,7 +91,26 @@ def cat(pen):
     pen.width(5)
     pen.down()
     pen.forward(10)
-    pen.circle(30, 30)
+    pen.circle(30, 40)
+    pen.right(40)
+    pen.up()
+    pen.goto(100, 0)
+    pen.down()
+    pen.forward(100)
+    pen.up()
+    pen.goto(100, -20)
+    pen.down()
+    pen.forward(100)
+    pen.up()
+    pen.goto(-100, 0)
+    pen.down()
+    pen.left(180)
+    pen.forward(100)
+    pen.up()
+    pen.goto(-100, -20)
+    pen.down()
+    pen.forward(100)
+
 
 
 
