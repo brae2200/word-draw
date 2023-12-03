@@ -7,7 +7,7 @@ def main():
     screen = turtle.Screen()
     screen.bgcolor('white')
     pen = turtle.Turtle()
-    pen.speed(9)
+    pen.speed(5)
     message = input("Message: ")
     if message == 'cat':
         cat(pen)
@@ -26,7 +26,6 @@ def main():
             if character == ' ':
                 last_char_space = True
             clist = code_map[character].split(' ')
-
             if clist[0] == 'f':
                 pen.forward(int(clist[1]))
             elif clist[0] == 'l':
