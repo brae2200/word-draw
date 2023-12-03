@@ -7,7 +7,7 @@ def main():
     screen = turtle.Screen()
     screen.bgcolor('white')
     pen = turtle.Turtle()
-    pen.speed(5)
+    pen.speed(9)
     message = input("Message: ")
     if message == 'cat':
         cat(pen)
@@ -15,6 +15,8 @@ def main():
         star(pen)
     elif message == 'flower':
         flower(pen)
+    elif message == 'car':
+        car(pen)
     else:
         last_char_space = True
         for character in message:
@@ -24,7 +26,7 @@ def main():
             if character == ' ':
                 last_char_space = True
             clist = code_map[character].split(' ')
-            
+
             if clist[0] == 'f':
                 pen.forward(int(clist[1]))
             elif clist[0] == 'l':
@@ -129,6 +131,58 @@ def flower(pen):
         pen.circle(30)
         pen.forward(150)
         pen.left(160)
+    pen.end_fill()
+
+def car(pen):
+    pen.width(5)
+    pen.color('navy')
+    pen.begin_fill()
+    pen.up()
+    pen.backward(200)
+    pen.down()
+    pen.forward(400)
+    pen.left(90)
+    pen.forward(100)
+    pen.left(90)
+    pen.forward(100)
+    pen.right(90)
+    pen.forward(100)
+    pen.left(90)
+    pen.forward(300)
+    pen.left(90)
+    pen.forward(200)
+    pen.end_fill()
+    pen.up()
+    pen.goto(-100, 0)
+    pen.color('black')
+    pen.dot(100)
+    pen.color('gray')
+    pen.dot(50)
+    pen.up()
+    pen.goto(100, 0)
+    pen.down()
+    pen.color('black')
+    pen.dot(100)
+    pen.color('gray')
+    pen.dot(50)
+    pen.up()
+    pen.color('gold')
+    pen.goto(200, 50)
+    pen.down()
+    pen.dot(25)
+    pen.up()
+    pen.goto(0, 100)
+    pen.color('skyblue')
+    pen.begin_fill()
+    pen.down()
+    pen.left(90)
+    pen.forward(75)
+    pen.left(90)
+    pen.forward(75)
+    pen.left(90)
+    pen.forward(75)
+    pen.left(90)
+    pen.forward(75)
     pen.end_fill()
 
 
