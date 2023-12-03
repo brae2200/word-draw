@@ -26,6 +26,7 @@ def main():
             if character == ' ':
                 last_char_space = True
             clist = code_map[character].split(' ')
+            
             if clist[0] == 'f':
                 pen.forward(int(clist[1]))
             elif clist[0] == 'l':
