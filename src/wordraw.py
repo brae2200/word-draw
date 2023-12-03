@@ -7,12 +7,7 @@ def main():
     screen = turtle.Screen()
     screen.bgcolor('white')
     pen = turtle.Turtle()
-    pen.speed(7)
-    #pen.pencolor('black')
-    #pen.width(20)
-
-    #format('A', pen)
-
+    pen.speed(5)
     message = input("Message: ")
     if message == 'cat':
         cat(pen)
@@ -29,7 +24,7 @@ def main():
             if character == ' ':
                 last_char_space = True
             clist = code_map[character].split(' ')
-        # print (clist)
+            
             if clist[0] == 'f':
                 pen.forward(int(clist[1]))
             elif clist[0] == 'l':
@@ -117,8 +112,7 @@ def cat(pen):
 
 def star(pen):
     pen.width(3)
-    pen.pencolor('gold')
-
+    pen.color('gold')
     pen.begin_fill()
 
     for steps in range(36):
@@ -129,12 +123,13 @@ def star(pen):
 
 def flower(pen):
     pen.width(5)
-    pen.pencolor('violet')
-
+    pen.color('violet')
+    pen.begin_fill()
     for steps in range(9):
         pen.circle(30)
         pen.forward(150)
         pen.left(160)
+    pen.end_fill()
 
 
 if __name__ == "__main__":
